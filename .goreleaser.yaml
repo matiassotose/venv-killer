@@ -1,0 +1,62 @@
+version: 2
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - format: tar.gz
+    # this name template makes the OS and Arch compatible with the results of uname.
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    # use zip for windows archives
+    format_overrides:
+      - goos: windows
+        format: zip
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
+# Configure Homebrew tap
+brews:
+  - repository:
+      owner: your-github-username
+      name: homebrew-tap
+    folder: Formula
+    homepage: "https://github.com/your-github-username/venv-killer"
+    description: "Recursively find and kill Python virtual environments."
+    test: |
+      system "#{bin}/venv-killer --version"
+
+# Configure NFPM for .deb and .rpm packages
+nfpms:
+  - maintainer: "Your Name <your@email.com>"
+    description: "Recursively find and kill Python virtual environments."
+    homepage: "https://github.com/your-github-username/venv-killer"
+    license: "MIT"
+    formats:
+      - deb
+      - rpm
+
+# Create a source tarball
+source:
+  enabled: true

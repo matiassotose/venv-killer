@@ -23,7 +23,7 @@ brew install venv-killer
 ### Go Install
 
 ```bash
-go install github.com/your-github-username/venv-killer@latest
+go install github.com/matiassotose/venv-killer@latest
 ```
 
 ### Manual

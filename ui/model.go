@@ -2,8 +2,9 @@ package ui
 
 import (
 	"fmt"
-	"venv-killer/deleter"
-	"venv-killer/scanner"
+
+	"github.com/matiassotose/venv-killer/deleter"
+	"github.com/matiassotose/venv-killer/scanner"
 
 	"github.com/charmbracelet/bubbles/progress"
 	"github.com/charmbracelet/bubbles/spinner"

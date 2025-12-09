@@ -1,4 +1,4 @@
-module venv-killer
+module github.com/matiassotose/venv-killer
 
 go 1.24.0
 

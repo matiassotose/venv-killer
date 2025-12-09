@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
-	"venv-killer/ui"
+
+	"github.com/matiassotose/venv-killer/ui"
 
 	tea "github.com/charmbracelet/bubbletea"
 )

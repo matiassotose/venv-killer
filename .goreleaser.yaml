@@ -41,7 +41,7 @@ brews:
   - repository:
       owner: your-github-username
       name: homebrew-tap
-    folder: Formula
+    directory: Formula
     homepage: "https://github.com/your-github-username/venv-killer"
     description: "Recursively find and kill Python virtual environments."
     test: |

@@ -11,7 +11,17 @@ To release a new version of `venv-killer`, follow these steps:
     Or follow instructions at [goreleaser.com](https://goreleaser.com/install/).
 
 2.  **GitHub Token**:
-    Ensure you have a `GITHUB_TOKEN` with `repo` permissions exported in your environment.
+    Ensure you have a `GITHUB_TOKEN` exported in your environment.
+
+    **Minimal Permissions (Fine-grained Personal Access Token):**
+    - **Repository access**: Only select the repositories you want to release.
+    - **Permissions**:
+        - `Contents`: **Read and Write** (to create releases and upload artifacts)
+        - `Metadata`: **Read** (mandatory)
+
+    **Classic Token:**
+    - `repo` (Full control of private repositories)
+    - `public_repo` (Access public repositories)
 
 ## Creating a Release
 

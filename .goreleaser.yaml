@@ -39,19 +39,19 @@ changelog:
 # Configure Homebrew tap
 brews:
   - repository:
-      owner: your-github-username
+      owner: matiassotose
       name: homebrew-tap
     directory: Formula
-    homepage: "https://github.com/your-github-username/venv-killer"
+    homepage: "https://github.com/matiassotose/venv-killer"
     description: "Recursively find and kill Python virtual environments."
     test: |
       system "#{bin}/venv-killer --version"
 
 # Configure NFPM for .deb and .rpm packages
 nfpms:
-  - maintainer: "Your Name <your@email.com>"
+  - maintainer: "Matias Soto <matias.soto.26@gmail.com>"
     description: "Recursively find and kill Python virtual environments."
-    homepage: "https://github.com/your-github-username/venv-killer"
+    homepage: "https://github.com/matiassotose/venv-killer"
     license: "MIT"
     formats:
       - deb

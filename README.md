@@ -4,6 +4,9 @@
 
 It identifies virtual environments by looking for `pyvenv.cfg` files or `bin/activate` scripts.
 
+> ⚠️ **WARNING**
+> This project was **100% vibe coded**. Use at your own risk. 🤙
+
 ## Features
 
 - 🚀 **Fast**: Recursively scans directories to find venvs.
@@ -16,7 +19,7 @@ It identifies virtual environments by looking for `pyvenv.cfg` files or `bin/act
 ### Homebrew (macOS/Linux)
 
 ```bash
-brew tap your-github-username/tap
+brew tap matiassotose/tap
 brew install venv-killer
 ```
 
@@ -28,7 +31,7 @@ go install github.com/matiassotose/venv-killer@latest
 
 ### Manual
 
-Download the latest binary from the [Releases](https://github.com/your-github-username/venv-killer/releases) page.
+Download the latest binary from the [Releases](https://github.com/matiassotose/venv-killer/releases) page.
 
 ## Usage
 
